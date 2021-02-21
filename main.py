@@ -17,10 +17,14 @@ def write_file(path,file,message):
 
 def thread_second():
     call(["python3", "server.py"])
-
+def ensure_dir(file_path):
+    directory = os.path.dirname(file_path)
+    if not os.path.exists(directory):
+        os.makedirs(directory)
 #Setting working directory
 print("Setting up working directory")
 pathsys="/app/data"
+ensure_dir(pathsys)
 print(pathsys)
 
 
