@@ -52,5 +52,5 @@ while True:
     print("Getting api result for :" + path)
     response = private_api.request("GET", path , '' , None )
     result=json.dumps(response, indent=4, sort_keys=True)
-    write_file(dataPath,"rig.json",result)
+    write_file(pathsys,"rig.json",result)
     time.sleep(scrapeInterval)
