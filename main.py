@@ -15,12 +15,15 @@ def write_file(path,file,message):
     os.chdir(pathsys)
 
 def thread_second():
-    call(["python", "server.py"])
+    call(["python3", "server.py"])
 
 #Setting working directory
+print("Setting up working directory")
+print(os.path.dirname(sys.argv[0]))
 os.chdir(os.path.dirname(sys.argv[0]))
 
 #Starting web server
+print("Starting web server")
 processThread = threading.Thread(target=thread_second)  # <- note extra ','
 processThread.start()
 
