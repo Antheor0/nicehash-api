@@ -45,7 +45,7 @@ scrapeInterval = "15"
 dataPath="data"
 
 #path of the request in the api
-path = "/main/api/v2/mining/rigs"
+path = "/main/api/v2/mining/rigs2"
 print("generating private_api session")
 private_api = nicehash.private_api(host, organizationId, apiKey, apiSecret)
 while True:
