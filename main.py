@@ -7,7 +7,7 @@ import time
 from subprocess import call
 
 def write_file(path,file,message):
-    pathsys=os.path.dirname(sys.argv[0])
+    pathsys=os.getcwd()
     os.chdir(path)
     file = open(file, "w")
     file.write(message)
@@ -19,8 +19,9 @@ def thread_second():
 
 #Setting working directory
 print("Setting up working directory")
-print(os.path.dirname(sys.argv[0]))
-os.chdir(os.path.dirname(sys.argv[0]))
+pathsys=os.getcwd()
+print(pathsys)
+
 
 #Starting web server
 print("Starting web server")
