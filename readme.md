@@ -1,11 +1,11 @@
-##NiceHash-Api##
+## NiceHash-Api
 Many thanks to shiggid for providing a working nicehash api client https://github.com/nicehash/rest-clients-demo/tree/master/python
 
-###Goal###
+### Goal
 The goal was to use the nicehash api to monitor statistics and expose them with the simplest web server possible.
 This must remain in a private environement.
 
-##Docker-Compose##
+## Docker-Compose
 
 ```docker-compose
 version: "3.9"
