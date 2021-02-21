@@ -1,3 +1,4 @@
+#!/bin/python3
 import nicehash
 import json
 import os
