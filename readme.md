@@ -1,3 +1,5 @@
+NOT WORKING YET
+
 ## NiceHash-Api
 Many thanks to shiggid for providing a working nicehash api client https://github.com/nicehash/rest-clients-demo/tree/master/python
 
@@ -18,11 +20,12 @@ Set up a scrape job in prometheus
 version: "3.9"
 services:
   nicehash-api:
-    images: antheor0/nicehash-api:latest
-    environement:
-        api_key=<nicehash api key>
-        api_secret=<nicehash api secret>
-        organization_id=<nicehash organization id>
+    container_name: Nicehash-API
+    image: antheor0/nicehash-api:latest
+    environment:
+        - api_key=<nicehash api key>
+        - api_secret=<nicehash api secret>
+        - organization_id=<nicehash organization id>
     ports:
       - "12323:12323"
 ```
