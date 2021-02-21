@@ -7,8 +7,7 @@ from http.server import HTTPServer, CGIHTTPRequestHandler
 srvPort=12323
 
 # Make sure the server is created at current directory
-os.chdir(os.path.dirname(sys.argv[0]))
-os.chdir("data")
+os.chdir("/app/data")
 # Create server object listening the port 80
 server_object = HTTPServer(server_address=('', 12323), RequestHandlerClass=CGIHTTPRequestHandler)
 #

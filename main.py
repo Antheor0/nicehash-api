@@ -20,7 +20,7 @@ def thread_second():
 
 #Setting working directory
 print("Setting up working directory")
-pathsys=os.getcwd()
+pathsys="/app/data"
 print(pathsys)
 
 
@@ -33,6 +33,9 @@ processThread.start()
 apiKey = os.environ["api_key"]
 apiSecret = os.environ["api_secret"]
 organizationId = os.environ["organization_id"]
+print("Apikey :" +apiKey)
+print("apiSecret :" +apiSecret)
+print("organizationId :" +organizationId)
 
 host = "https://api2.nicehash.com"
 #setting up scrape time
@@ -43,8 +46,10 @@ dataPath="data"
 
 #path of the request in the api
 path = "/main/api/v2/mining/rigs"
+print("generating private_api session")
 private_api = nicehash.private_api(host, organizationId, apiKey, apiSecret)
 while True:
+    print("Getting api result for :" + path)
     response = private_api.request("GET", path , '' , None )
     result=json.dumps(response, indent=4, sort_keys=True)
     write_file(dataPath,"rig.json",result)

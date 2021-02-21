@@ -5,6 +5,13 @@ Many thanks to shiggid for providing a working nicehash api client https://githu
 The goal was to use the nicehash api to monitor statistics and expose them with the simplest web server possible.
 This must remain in a private environement.
 
+### Description
+The server is intended to work in a docker environement.
+it exposes json data on *.*.*.*:12323/rig.json
+
+### Prometheus configuration
+Set up a scrape job in prometheus
+
 ## Docker-Compose
 
 ```docker-compose
